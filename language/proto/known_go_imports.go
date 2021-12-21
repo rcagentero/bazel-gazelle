@@ -297,7 +297,6 @@ var knownGoProtoImports = map[string]label.Label{
 	"google.golang.org/genproto/googleapis/maps/routes/v1alpha":                                    label.New("go_googleapis", "google/maps/routes/v1alpha", "routes_go_proto"),
 	"google.golang.org/genproto/googleapis/maps/unity":                                             label.New("go_googleapis", "google/maps/unity", "unity_go_proto"),
 	"google.golang.org/genproto/googleapis/monitoring/dashboard/v1":                                label.New("go_googleapis", "google/monitoring/dashboard/v1", "dashboard_go_proto"),
-	"google.golang.org/genproto/googleapis/monitoring/v3":                                          label.New("go_googleapis", "google/monitoring/v3", "monitoring_go_proto"),
 	"google.golang.org/genproto/googleapis/partner/aistreams/v1alpha1":                             label.New("go_googleapis", "google/partner/aistreams/v1alpha1", "aistreams_go_proto"),
 	"google.golang.org/genproto/googleapis/privacy/dlp/v2":                                         label.New("go_googleapis", "google/privacy/dlp/v2", "dlp_go_proto"),
 	"google.golang.org/genproto/googleapis/pubsub/v1":                                              label.New("go_googleapis", "google/pubsub/v1", "pubsub_go_proto"),

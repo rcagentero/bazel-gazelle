@@ -30,6 +30,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 	"text/template"
 
 	"github.com/bazelbuild/bazel-gazelle/label"
@@ -114,7 +115,13 @@ func run(args []string) (err error) {
 	seen := make(map[string]label.Label)
 	for _, rec := range records {
 		imp := rec[keyColumn]
-		lbl, err := label.Parse(rec[valueColumn])
+		val := rec[valueColumn]
+
+		if strings.HasPrefix(val, "@go_googleapis") {
+			continue
+		}
+
+		lbl, err := label.Parse(val)
 		if err != nil {
 			return err
 		}

@@ -117,7 +117,9 @@ func run(args []string) (err error) {
 		imp := rec[keyColumn]
 		val := rec[valueColumn]
 
-		if strings.HasPrefix(val, "@go_googleapis") {
+		// Avoid creating a mapping for Google Cloud APIs except
+		// for google/api dependencies.
+		if strings.HasPrefix(val, "@go_googleapis") && !strings.HasPrefix(imp, "google/api") {
 			continue
 		}
 
